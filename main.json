@@ -1,0 +1,146 @@
+{
+	"name": "Experimental",
+	"description": "Mod that test new modloader features\nFeel free to use code from here!",
+	
+	"minGameBuild": 99,
+	
+	"resources": {
+		"sprite": {
+			"sprDismasIdle": "sprites/sprDismasIdle.png:1:12:12",
+			"sprDismasWalk": "sprites/sprDismasWalk.png:7:12:12",
+			"sprDismasDead": "sprites/sprDismasIdle.png:1:12:12",
+			"sprDismasLadder": "sprites/sprDismasLadder.png:1:12:12",
+			"sprDismasHand": "sprites/sprDismasHand.png:1:12:12",
+			
+			"sprDismasKnife": "sprites/sprDismasKnife.png:1:12:12",
+			"sprDismasDynamite": "sprites/sprDismasDynamite.png:1:12:12",
+			
+			"sprAbilitySack": "sprites/sack.png:1:12:12",
+			"sprAbilityDiscord": "sprites/discord.png:1:12:12",
+			
+			"sprHarmfulMask": "sprites/sprHarmMask.png:1:15:10",
+			
+			"sprDismasDuelistMark": "sprites/sprDismasDuelistMark.png:1:12:16"
+		},
+		
+		"sound": {
+			"sndSound": "sounds/sound.ogg",
+			"sndDagger": "sounds/dagger.ogg"
+		}
+	},
+	
+	"content": [
+		{
+			"type": "weapon",
+			
+			"id": "dis_knife",
+			
+			"sprite": "sprDismasKnife",
+			
+			"params": {
+				"attacks": {
+					"projectile": "Melee",
+					
+					"damage": 4,
+					"reload": 14,
+					"type": "sharp",
+					
+					"color": "230 230 255",
+					
+					"hitFunction": "hit_dismas_sword"
+				},
+				
+				"tier": -1
+			}
+		},
+		
+		{
+			"type": "active_item",
+			"id": "dis_dynamite",
+			
+			"sprite": "sprDismasDynamite",
+			
+			"params": {
+				"time": 10,
+				"uses": 3,
+				"essence": 0,
+				"special": true
+			}
+		},
+	
+		{
+			"type": "character",
+			
+			"id": "dismas",
+			
+			"sprites": {
+				"Idle": "sprDismasIdle",
+				"Walk": "sprDismasWalk",
+				"Dead": "sprDismasDead",
+				"Ladder": "sprDismasLadder",
+				"Hand": "sprDismasHand"
+			},
+			
+			"params": {
+				"weapon": "dis_knife",
+				"second_weapon": "none",
+				"active_item": "dis_dynamite",
+				"hat": "none",
+				
+				"variables": {
+					"damage": 1
+				},
+				
+				"unlocked": false,
+				"hasSkin": false,
+				"visible": true
+			}
+		},
+		
+		{
+			"type": "perk",
+			"id": "sack",
+			
+			"sprite": "sprAbilitySack",
+			
+			"params": {
+				"isCurse": false,
+				"special": false
+			}
+		},
+		
+		{
+			"type": "perk",
+			"id": "discord",
+			
+			"sprite": "sprAbilityDiscord",
+			
+			"params": {
+				"isCurse": false,
+				"special": false
+			}
+		},
+		
+		{
+			"type": "hat",
+			"id": "harm_mask",
+			
+			"sprite": "sprHarmfulMask",
+			
+			"params": {
+				"stats": {
+					"damage": { "value": 1.75, "tierValue": 2 },
+					"damage_reduction": { "value": 0.4, "tierValue": 0.04 }
+				},
+				
+				"type": "mask"
+			}
+		}
+	],
+
+	"scripts": [
+		"dismas.gml",
+		"perks.gml",
+		"harm.gml"
+	]
+}

@@ -1,0 +1,31 @@
+{
+	"en": {
+		"char.dismas.name": "Dismas",
+		"char.dismas.desc": "Has dynamites#Duelist",
+		"char.dismas.unlock": "Defeat first boss with Gestas#Using only Cheap sword",
+		
+		"weapon.name.dis_knife": "Flawless dagger",
+		"weapon.description.dis_knife": "Deals more damage each hit",
+		
+		"perk.name.discord": "Discord",
+		"perk.description.discord": "??",
+		
+		"perk.name.sack": "Bursting sack",
+		"perk.description.sack": "Rapidly fire projectiles#in random direction"
+	},
+	
+	"ru": {
+		"char.dismas.name": "Дисмас",
+		"char.dismas.desc": "Шашка динамита#Дуэлянт",
+		"char.dismas.unlock": "Победите первого босса за Гестаса#Используя только стартовое оружие",
+		
+		"weapon.name.dis_knife": "Безупречный кинжал",
+		"weapon.description.dis_knife": "Наносит больше урона с каждым ударом",
+		
+		"perk.name.discord": "Discord",
+		"perk.description.discord": "??",
+		
+		"perk.name.sack": "Разрывающийся мешок",
+		"perk.description.sack": "Часто выстреливает снарядами в случайные стороны"
+	}
+}
