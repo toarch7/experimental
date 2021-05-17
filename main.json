@@ -2,7 +2,7 @@
 	"name": "Experimental",
 	"description": "Mod that test new modloader features\nFeel free to use code from here!",
 	
-	"minGameBuild": 100,
+	"minGameBuild": 99,
 	
 	"resources": {
 		"sprite": {
@@ -36,6 +36,8 @@
 			"id": "dis_knife",
 			
 			"sprite": "sprDismasKnife",
+			
+			"boundScript": "dismas.gml",
 			
 			"params": {
 				"attacks": {

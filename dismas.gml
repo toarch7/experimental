@@ -1,5 +1,6 @@
 /// For faster work
-#define init
+
+//init
 global.duelistTarget = {
 	id: -4,
 	hits: 0
@@ -42,7 +43,7 @@ attacker, proj) {
 var attacker = argument0
 var victim = argument1
 
-if instance_exists(attacker) && attacker.object_index == Player && attacker.char == 100 {
+if instance_exists(attacker) && attacker.object_index == Player && player_get_char(attacker) == "dismas" {
 	var _target = global.duelistTarget;
 	
 	if _target.id != victim {
@@ -56,14 +57,13 @@ if instance_exists(attacker) && attacker.object_index == Player && attacker.char
 	}
 }
 
-/// Visual effect
+/// Visuals
 #define draw
-
 var target = global.duelistTarget.id;
 var wave = get_timer() / 500000;
 
 if target && instance_exists(target) {
-	//draw_sprite_ext(sprDismasDuelistMark, 0, target.x, target.y - target.z - 18 - sin(wave) * 3, 1, 1, 0, c_red, 1 + sin(wave) * 0.5);
+	draw_sprite_ext(sprDismasDuelistMark, 0, target.x, target.y - target.z - 18 - sin(wave) * 3, 1, 1, 0, c_red, 1 + sin(wave) * 0.5);
 }
 
 
@@ -71,7 +71,7 @@ if target && instance_exists(target) {
 #define room_end
 var player = player_get();
 
-if instance_exists(player) && player.char == 100 {
+if instance_exists(player) && player_get_char(player) == "dismas" {
 	player.damage -= global.duelistTarget.hits;
 }
 

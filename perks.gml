@@ -1,4 +1,3 @@
-#define init
 global.DiscordPerk = {
 	active: false,
 	orbital: -4,
@@ -43,5 +42,18 @@ if instance_exists(player) {
 		bullet.image_angle = bullet.direction;
 		bullet.speed = 6;
 		bullet.creator = player;
+		bullet.damage = 2;
+		bullet.image_xscale = 0.2;
+		bullet.image_yscale = 0.2;
 	}
+}
+
+if level_generating() && get_perk("discord") {
+	sound_stop_music();
+}
+
+/// Fix crash
+#define cleanup
+if instance_exists(global.DiscordPerk.orbital) {
+	global.DiscordPerk.orbital.sprite_index = sprMeteor;
 }

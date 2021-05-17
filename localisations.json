@@ -11,7 +11,10 @@
 		"perk.description.discord": "??",
 		
 		"perk.name.sack": "Bursting sack",
-		"perk.description.sack": "Rapidly fire projectiles#in random direction"
+		"perk.description.sack": "Rapidly fire projectiles#in random direction",
+		
+		"hat.name.harm_mask": "Harmful mask",
+		"hat.description.harm_mask": "It hurts so good"
 	},
 	
 	"ru": {
@@ -26,6 +29,9 @@
 		"perk.description.discord": "??",
 		
 		"perk.name.sack": "Разрывающийся мешок",
-		"perk.description.sack": "Часто выстреливает снарядами в случайные стороны"
+		"perk.description.sack": "Часто выстреливает снарядами в случайные стороны",
+		
+		"hat.name.harm_mask": "Маска вреда",
+		"hat.description.harm_mask": "Так больно и приятно"
 	}
 }
