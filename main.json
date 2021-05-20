@@ -1,8 +1,8 @@
 {
 	"name": "Experimental",
-	"description": "Mod that test new modloader features\nFeel free to use code from here!",
+	"description": "Test mod. Adds Gestas' b-skin as standalone character\nand some new hats/weapons/actives/etc",
 	
-	"minGameBuild": 99,
+	"minGameBuild": 100,
 	
 	"resources": {
 		"sprite": {
