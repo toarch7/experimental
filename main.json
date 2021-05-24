@@ -1,6 +1,6 @@
 {
 	"name": "Experimental",
-	"description": "Test mod. Adds Gestas' b-skin as standalone character\nAnd some new hats/weapons/actives/etc",
+	"description": "Mod for testing new modloader features",
 	
 	"minGameBuild": 100,
 	
@@ -137,12 +137,41 @@
 				
 				"type": "mask"
 			}
+		},
+		
+		{
+			"type": "structure",
+			"roomPool": "generic",
+			"weight": 1.0,
+			
+			"pattern": [
+				"  #  ",
+				" ### ",
+				"##!##",
+				" ### ",
+				"  #  "
+			],
+			
+			"keys": [
+				"!", "Pedestal", { "item": "dis_knife" },
+				"#", "PushSpikes", { "visible": false },
+				" ", "Floor", {  }
+			],
+			
+			"payload": {
+				"id": "DismasSword",
+				"name": "Dismas' sword for free"
+			},
+			
+			"condition": "structure_cond_handler",
+			"func": "structure_gen_handler"
 		}
 	],
 
 	"scripts": [
 		"dismas.gml",
 		"perks.gml",
-		"harm.gml"
+		"harm.gml",
+		"structures.gml"
 	]
 }

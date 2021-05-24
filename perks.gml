@@ -34,7 +34,7 @@ if instance_exists(player) {
 		sound_stop_music();
 	}
 	
-	if get_perk("sack", index) && !level_generating() && random(1) < 0.67 {
+	if get_perk("sack", index) && !level_is_generating() && random(1) < 0.67 {
 		var bullet = instance_create(player.x, player.y, RobotBlast)
 		
 		bullet.team = player.team;
@@ -48,7 +48,7 @@ if instance_exists(player) {
 	}
 }
 
-if level_generating() && get_perk("discord") {
+if level_is_generating() && get_perk("discord") {
 	sound_stop_music();
 }
 
