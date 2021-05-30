@@ -2,7 +2,7 @@
 	"name": "Experimental",
 	"description": "Mod for testing new modloader features",
 	
-	"minGameBuild": 100,
+	"minGameBuild": 103,
 	
 	"resources": {
 		"sprite": {
